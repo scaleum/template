@@ -4,7 +4,7 @@ require __DIR__ . '/../vendor/autoload.php';
 
 use Application\Behaviors\LoggerAdapter;
 use Application\Behaviors\Services;
-use Scaleum\Http\Application;
+use Scaleum\Console\Application;
 
 // For our dev environment we will report all errors to the screen
 error_reporting(E_ALL & ~E_NOTICE & ~E_DEPRECATED & ~E_STRICT & ~E_WARNING);

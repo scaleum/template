@@ -1,0 +1,58 @@
+<div class="lt-grid lt-grid-cols-12 lt-gap-2 w100r">
+    <div class="lt-box lt-grid-col-span-3 text-valign-middle text-halign-left">
+        <div class="lt-logo">
+            <h2>{{gettext:#Project name}}</h2>
+        </div>
+    </div>
+    <div class="lt-box lt-grid-col-span-9 text-valign-middle text-halign-right">
+        <ul class="lt-nav">
+            <li class="with-submenu rtl" data-lang-switcher>
+                <div class="lt-chevron-heading">
+                    <span data-lang-current>{{gettext:Loading...}}</span>
+                    <span class="lt-checksvg">
+                        <svg viewBox="0 0 24 24" width="18" height="18">
+                            <polyline points="6 9 12 15 18 9" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </span>
+                </div>
+                <ul class="lt-submenu" data-lang-items></ul>
+            </li>
+
+            <li class="with-submenu rtl">
+                <div class="lt-chevron-heading">
+                    <span>{{gettext:Scheme}}</span>
+                    <span class="lt-checksvg">
+                        <svg viewBox="0 0 24 24" width="18" height="18">
+                            <polyline points="6 9 12 15 18 9" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </span>
+                </div>
+                <ul class="lt-submenu">
+                    <li><a href="#" id="lt-layout-toggle">{{gettext:Switch layout}}</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</div>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const STORAGE_KEY = 'lt-layout';
+        const STYLES = ['fullscreen', 'compact', 'relative'];
+        const toggleBtn = document.getElementById('lt-layout-toggle');
+        const root = document.documentElement;
+
+        const saved = localStorage.getItem(STORAGE_KEY);
+        const initial = (saved && STYLES.includes(saved)) ? saved : STYLES[0];
+        root.setAttribute('data-layout', initial);
+
+        toggleBtn.addEventListener('click', function() {
+            const current = root.getAttribute('data-layout');
+            const idx = STYLES.indexOf(current);
+            const next = STYLES[(idx + 1) % STYLES.length];
+            root.setAttribute('data-layout', next);
+            localStorage.setItem(STORAGE_KEY, next);
+        });
+    });
+</script>

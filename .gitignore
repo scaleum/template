@@ -1,0 +1,38 @@
+# Node artifact files
+node_modules/
+dist/
+
+# Log files
+*.log
+
+# Package files
+*.jar
+
+# JetBrains IDE
+.idea/
+
+# VS Code
+.vscode/
+
+
+log
+log-*.php
+*.ini
+composer.lock
+
+# Local environment directories
+.local*/
+.env*/
+.styles
+.temp
+.run
+.styles
+
+# Temporary files
+locking
+runtime
+cache
+composer.lock
+
+# Vendors
+vendor

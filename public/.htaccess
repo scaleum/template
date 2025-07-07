@@ -1,0 +1,12 @@
+Header set Content-Security-Policy "frame-ancestors 'self';"
+AddDefaultCharset utf-8
+Options +FollowSymlinks -Indexes
+AddType application/x-httpd-php .tmpl
+DirectoryIndex index.php index.htm index.html
+RewriteEngine On
+
+# For Friendly URLs
+RewriteCond $1 !^(index\.php|robots\.txt|favicon\.ico)
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php?$1 [L,QSA]

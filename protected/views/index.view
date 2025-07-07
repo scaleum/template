@@ -1,0 +1,8 @@
+<div class="lt-row">
+    <h2>{{gettext:Hello}}, <?php echo $name ?></h2>
+    {{locale:en_US}}<p>This is a placeholder page in the current version of the template.</p>{{/locale}}
+    {{locale:uk_UA}}<p>Це сторінка-заглушка у поточній версії шаблону.</p>{{/locale}}
+</div>
+<div class="lt-row">
+    {{include:styles.view}}
+</div>

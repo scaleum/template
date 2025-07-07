@@ -1,0 +1,519 @@
+<h2>{{gettext:Controls & Styles}}</h2>
+<div class="lt-grid lt-grid-auto-fit lt-gap-2">
+    <div class="lt-box">
+        <div class="lt-button lt-button-alert w96">Alert</div>
+        <div class="lt-button lt-button-success w96">Success</div>
+        <div class="lt-button lt-button-warn w96">Warning</div>
+        <div class="lt-button lt-button-info w96">Info</div>
+        <div class="lt-button lt-button-black w96">Black</div>
+        <div class="lt-button w96">Default</div>
+        <div style="margin-bottom: 16px;"></div>
+        <div class="lt-toggle-group lt-vertical">
+            <label class="lt-input-toggle">
+                <input type="checkbox" name="check_1" value="1" checked="checked" />
+                <span class="lt-mark lt-checkbox"></span>
+                <span class="lt-label">Check 1</span>
+            </label>
+            <label class="lt-input-toggle">
+                <input type="checkbox" name="check_2" value="2" />
+                <span class="lt-mark lt-checkbox"></span>
+                <span class="lt-label">Check 1</span>
+            </label>
+            <label class="lt-input-toggle">
+                <input type="checkbox" name="check_3" value="3" checked="checked" disabled />
+                <span class="lt-mark lt-checkbox"></span>
+                <span class="lt-label">Other(disabled)</span>
+            </label>
+        </div>
+        <div style="margin-bottom: 16px;"></div>
+        <div class="lt-toggle-group lt-vertical">
+            <label class="lt-input-toggle">
+                <input type="radio" name="gender" value="1" checked="checked" />
+                <span class="lt-mark lt-radio"></span>
+                <span class="lt-label">Select 1</span>
+            </label>
+            <label class="lt-input-toggle">
+                <input type="radio" name="gender" value="2" />
+                <span class="lt-mark lt-radio"></span>
+                <span class="lt-label">Select 2</span>
+            </label>
+            <label class="lt-input-toggle">
+                <input type="radio" name="other" value="3" checked="checked" disabled />
+                <span class="lt-mark lt-radio"></span>
+                <span class="lt-label">Other(disabled)</span>
+            </label>
+        </div>
+        <div style="margin-bottom: 16px;"></div>
+        <div class="lt-toggle-group lt-vertical">
+            <label class="lt-input-toggle lt-toggle-switch">
+                <input type="checkbox" />
+                <span class="lt-mark lt-switch"></span>
+                <span class="lt-label">Switch 1</span>
+            </label>
+            <label class="lt-input-toggle lt-toggle-switch">
+                <input type="checkbox" checked="checked" />
+                <span class="lt-mark lt-switch"></span>
+                <span class="lt-label">Switch 2</span>
+            </label>
+            <label class="lt-input-toggle lt-toggle-switch">
+                <input type="checkbox" disabled />
+                <span class="lt-mark lt-switch"></span>
+                <span class="lt-label">Switch 3(disabled)</span>
+            </label>
+        </div>
+    </div>
+    <div class="lt-box">
+        <div class="lt-button lt-button-alert w96"><i class="lt-icon-dollar-2 lt-icon-small"></i>Label</div>
+        <div class="lt-button lt-button-alert w96"><i class="lt-icon-circle-help lt-icon-small"></i>Label</div>
+        <div class="lt-button lt-button-black w96"><i class="lt-icon-dollar-2 lt-icon-small"></i>Label</div>
+        <div class="lt-button lt-button-black w96"><i class="lt-icon-circle-help lt-icon-small"></i>Label</div>
+        <div class="lt-button lt-button-alert w96"><i class="lt-icon-key lt-icon-small"></i>Label</div>
+        <div class="lt-button lt-button-alert w96"><i class="lt-icon-lock-cube lt-icon-small"></i>Label</div>
+        <div class="lt-button lt-button-black w96"><i class="lt-icon-speech-warn lt-icon-small"></i>Label</div>
+        <div class="lt-button lt-button-black w96"><i class="lt-icon-power lt-icon-small"></i>Label</div>
+        <fieldset>
+            <legend>Form fieldset</legend>
+            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget
+                dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes,
+                nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu,pretium
+                quis, sem. Nulla consequat massa quis enim.</p>
+        </fieldset>
+    </div>
+    <div class="lt-box">
+        <fieldset>
+            <legend>Inputs</legend>
+            <input class="w100r" type="text" placeholder="Input you text here..." value="Text">
+            <input class="w100r lt-valid" type="text" placeholder="Input you text here..." value="Text">
+            <input class="w100r lt-invalid" type="text" placeholder="Input you text here..." value="Text">
+            <input class="w100r" type="text" placeholder="Readonly" readonly="readonly" value="Text">
+            <input class="w100r" type="text" placeholder="Disabled" disabled="disabled" value="Text">
+            <input class="w100r" type="password" value="Text">
+            <textarea placeholder="Textarea" rows="5" ...=""></textarea>
+        </fieldset>
+
+
+        <fieldset>
+            <legend>Inputs + labels</legend>
+            <!-- Обёртка с outlined-стилем -->
+            <div class="lt-form-outlined">
+                <!-- Статичный лейбл -->
+                <label for="city" class="lt-form-outlined-label">Label</label>
+                <!-- Поле с placeholder внутри -->
+                <input id="city" type="text" class="lt-form-outlined-control" value="Text"
+                    placeholder="Enter text here ..." />
+            </div>
+            <div class="lt-form-outlined">
+                <!-- Статичный лейбл -->
+                <label for="city" class="lt-form-outlined-label">Label</label>
+                <!-- Поле с placeholder внутри -->
+                <input id="city" type="text" class="lt-form-outlined-control w100r lt-valid" value="Text"
+                    placeholder="Enter text here ..." />
+            </div>
+
+            <div class="lt-form-outlined">
+                <!-- Статичный лейбл -->
+                <label for="city" class="lt-form-outlined-label">Label</label>
+                <!-- Поле с placeholder внутри -->
+                <input id="city" type="text" class="lt-form-outlined-control w100r lt-invalid"
+                    placeholder="Enter text here ..." />
+            </div>
+            <div class="lt-form-outlined bordered">
+                <!-- Статичный лейбл -->
+                <label for="city" class="lt-form-outlined-label">Label</label>
+                <!-- Поле с placeholder внутри -->
+                <input id="city" type="text" class="lt-form-outlined-control" value="Text"
+                    placeholder="Enter text here ..." />
+            </div>
+        </fieldset>
+
+    </div>
+    <div class="lt-box">
+        <fieldset>
+            <legend>Select</legend>
+            <select class="w100r">
+                <optgroup label="Option group">
+                    <option selected="selected">Item 1</option>
+                    <option>Item 2</option>
+                </optgroup>
+                <option>Item 3</option>
+            </select>
+            <!-- multi-row & multiple -->
+            <select class="w100r" size="7" multiple="multiple">
+                <optgroup label="Option group">
+                    <option selected="selected">Item 1</option>
+                    <option>Item 2</option>
+                </optgroup>
+                <option>Item 3</option>
+            </select>
+        </fieldset>
+
+        <fieldset>
+            <legend>Select + labels</legend>
+            <div class="lt-form-outlined">
+                <label for="branch" class="lt-form-outlined-label">Label</label>
+                <select id="branch" class="lt-form-outlined-control">
+                    <optgroup label="Option group">
+                        <option selected="selected">Item 1</option>
+                        <option>Item 2</option>
+                    </optgroup>
+                    <option>Item 3</option>
+                </select>
+            </div>
+            <div class="lt-form-outlined bordered">
+                <label for="branch" class="lt-form-outlined-label">Label</label>
+                <select id="branch" class="lt-form-outlined-control">
+                    <option value="" disabled selected hidden>Select ...</option>
+                    <option value="1">Option 1</option>
+                    <option value="2">Option 2</option>
+                </select>
+            </div>
+        </fieldset>
+    </div>
+</div>
+
+<h2>{{gettext:Typography}}</h2>
+<div>
+    <div class="lt-row">
+        <h1>Header H1</h1>
+        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
+            Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur
+            ridiculus
+            mus. Donec quam felis, ultricies nec, pellentesque eu,pretium quis, sem. Nulla consequat
+            massa
+            quis enim.</p>
+        <h2>Header H2</h2>
+        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
+            Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur
+            ridiculus
+            mus. Donec quam felis, ultricies nec, pellentesque eu,pretium quis, sem. Nulla consequat
+            massa
+            quis enim.</p>
+        <h3>Header H3</h3>
+        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
+            Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur
+            ridiculus
+            mus. Donec quam felis, ultricies nec, pellentesque eu,pretium quis, sem. Nulla consequat
+            massa
+            quis enim.</p>
+        <h4>Header H4</h4>
+        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
+            Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur
+            ridiculus
+            mus. Donec quam felis, ultricies nec, pellentesque eu,pretium quis, sem. Nulla consequat
+            massa
+            quis enim.</p>
+        <h5>Header H5</h5>
+        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
+            Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur
+            ridiculus
+            mus. Donec quam felis, ultricies nec, pellentesque eu,pretium quis, sem. Nulla consequat
+            massa
+            quis enim.</p>
+        <h6>Header H6</h6>
+        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
+            Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur
+            ridiculus
+            mus. Donec quam felis, ultricies nec, pellentesque eu,pretium quis, sem. Nulla consequat
+            massa
+            quis enim.</p>
+    </div>
+
+    <div class="lt-section"><span>Conventional, bulleted lists, and definition lists</span></div>
+    <div class="lt-grid">
+        <div class="lt-row rel">
+            <div class="lt-cell-4">
+                <div class="lt-box">
+                    <p>Simply list <code>&lt;ul&gt;</code>:</p>
+                    <ul>
+                        <li>First element</li>
+                        <li>Second element</li>
+                        <li>Third element</li>
+                        <li>Fourth element</li>
+                        <li>Fifth element</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="lt-cell-4">
+                <div class="lt-box">
+                    <p>Numbered list <code>&lt;ol&gt;</code>:</p>
+                    <ol>
+                        <li>First element</li>
+                        <li>Second element</li>
+                        <li>Third element</li>
+                        <li>Fourth element</li>
+                        <li>Fifth element</li>
+                    </ol>
+                </div>
+            </div>
+            <div class="lt-cell-4">
+                <div class="lt-box">
+                    <p>List of definitions <code>&lt;dl&gt;</code>:</p>
+                    <dl>
+                        <dt>First element, tag <code>&lt;dt&gt;</code></dt>
+                        <dd>Second element, tag <code>&lt;dd&gt;</code></dd>
+                        <dt>Third element</dt>
+                        <dd>Fourth element</dd>
+                    </dl>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="lt-row">
+        <div class="lt-section"><span>Line tags</span></div>
+
+        <table class="clear" style="width: 100%;">
+            <tbody>
+                <tr>
+                    <td style="width: 40%;"><code>&lt;a href="#"&gt;...&lt;/a&gt;</code></td>
+                    <td><a href="#">link</a></td>
+                </tr>
+                <tr>
+                    <td><code>&lt;i&gt;</code> и <code>&lt;em&gt;</code></td>
+                    <td><i>italic</i> and <em>accented</em> text</td>
+                </tr>
+                <tr>
+                    <td><code>&lt;b&gt;</code> и <code>&lt;strong&gt;</code></td>
+                    <td><b>bold</b> and <strong>accented</strong> text</td>
+                </tr>
+                <tr>
+                    <td><code>&lt;mark&gt;</code></td>
+                    <td>
+                        <mark>selected</mark>
+                        text
+                    </td>
+                </tr>
+                <tr>
+                    <td><code> &lt;small&gt;</code></td>
+                    <td>
+                        <small>small</small>
+                        text
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>&lt;abbr title="..."&gt;...&lt;/abbr&gt;</code></td>
+                    <td>It is simply <abbr title="Lorem ipsum dolor sit amet, consectetuer adipiscing elit">spam</abbr>
+                        text</td>
+                </tr>
+                <tr>
+                    <td><code>&lt;cite&gt;</code> and <code>&lt;q&gt;</code></td>
+                    <td><cite>citation</cite> and <q>quotation dedicated</q></td>
+                </tr>
+                <tr>
+                    <td><code>&lt;code&gt;</code> and <code>&lt;dfn&gt;</code></td>
+                    <td><code>source code</code> and <dfn>new definition</dfn></td>
+                </tr>
+                <tr>
+                    <td><code>&lt;kbd&gt;</code></td>
+                    <td>«hot» key <kbd>&lt;Ctrl&gt;+&lt;S&gt;</kbd></td>
+                </tr>
+                <tr>
+                    <td><code>&lt;var&gt;</code> and <code>&lt;samp&gt;</code></td>
+                    <td>var name <var>variableName</var> and <samp>console output</samp></td>
+                </tr>
+                <tr>
+                    <td><code>&lt;ins&gt;</code> and <code>&lt;del&gt;</code></td>
+                    <td>
+                        <ins>added text</ins>
+                        and
+                        <del>deleted text</del>
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>&lt;sub&gt;</code> and <code>&lt;sup&gt;</code></td>
+                    <td><sub>sub</sub> text and <sup>sup</sup> text</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="lt-row">
+        <div class="lt-section"><span>Block tags</span></div>
+        <p>Tag <code>&lt;blockquote&gt;</code> for long citations:</p>
+        <blockquote>
+            <p><strong>Citation </strong> — verbatim excerpt from some of the text. It is important that
+                the
+                quoted text is uniquely identified as inserted.</p>
+
+            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget
+                dolor.
+                Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur
+                ridiculus mus. Donec quam felis, ultricies nec,
+                pellentesque
+                eu,pretium quis, sem. Nulla consequat massa quis enim.</p>
+
+            <p><cite>https://wikipedia.org/wiki/citation</cite></p>
+        </blockquote>
+        <p>Tag <code>&lt;hr&gt;</code>:</p>
+        <hr>
+        <p>Tag <code>&lt;pre&gt;</code>:</p>
+        <pre>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor., tag &lt;pre&gt;...&lt;/pre&gt;</pre>
+    </div>
+
+    <div class="lt-row">
+        <div class="lt-section"><span>Tables</span></div>
+        <p><b>Default table style</b></p>
+        <table class="lt-table hover zebra">
+            <thead>
+                <tr class="rel">
+                    <th class="lt-box lt-c">ID</th>
+                    <th class="lt-box lt-cell-3">Date</th>
+                    <th class="lt-box lt-cell-2 lt-c nth">Amount / USD</th>
+                    <th class="lt-box">Details</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="">
+                    <td class="lt-c">1</td>
+                    <td>April 13, 2016, 6:59 pm</td>
+                    <td class="lt-r nth">-3950.00</td>
+                    <td>Mutual serving</td>
+                </tr>
+                <tr class="">
+                    <td class="lt-c">2</td>
+                    <td>April 13, 2016, 9:29 am</td>
+                    <td class="lt-r nth">0.00</td>
+                    <td>Mutual serving</td>
+                </tr>
+                <tr class="">
+                    <td class="lt-c">3</td>
+                    <td>March 2, 2016, 7:59 pm</td>
+                    <td class="lt-r nth">-100.00</td>
+                    <td>Mutual serving</td>
+                </tr>
+                <tr class="">
+                    <td class="lt-c">4</td>
+                    <td>January 25, 2016, 6:42 pm</td>
+                    <td class="lt-r nth">-3950.00</td>
+                    <td>Mutual serving</td>
+                </tr>
+                <tr class="">
+                    <td class="lt-c">5</td>
+                    <td>January 19, 2016, 4:30 pm</td>
+                    <td class="lt-r nth">0.00</td>
+                    <td>Mutual serving</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <th class="lt-box lt-c">ID</th>
+                    <th class="lt-box">Date</th>
+                    <th class="lt-box lt-cell-2 lt-c nth">Amount / USD</th>
+                    <th class="lt-box">Details</th>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+
+    <div class="lt-row">
+        <p><b>Colless table</b><br>To create a table without displaying the boundaries of columns, add
+            the
+            class name <code>lt-no-col-border</code> to tag <code>table</code>, as bellow.</p>
+        <table class="lt-table hover lt-no-col-border">
+            <thead>
+                <tr class="rel">
+                    <th class="lt-box lt-c">ID</th>
+                    <th class="lt-box lt-cell-3">Date</th>
+                    <th class="lt-box lt-cell-2 lt-c nth">Amount / USD</th>
+                    <th class="lt-box">Details</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="">
+                    <td class="lt-c">1</td>
+                    <td>April 13, 2016, 6:59 pm</td>
+                    <td class="lt-r nth">-3950.00</td>
+                    <td>Mutual serving</td>
+                </tr>
+                <tr class="">
+                    <td class="lt-c">2</td>
+                    <td>April 13, 2016, 9:29 am</td>
+                    <td class="lt-r nth">0.00</td>
+                    <td>Mutual serving</td>
+                </tr>
+                <tr class="">
+                    <td class="lt-c">3</td>
+                    <td>March 2, 2016, 7:59 pm</td>
+                    <td class="lt-r nth">-100.00</td>
+                    <td>Mutual serving</td>
+                </tr>
+                <tr class="">
+                    <td class="lt-c">4</td>
+                    <td>January 25, 2016, 6:42 pm</td>
+                    <td class="lt-r nth">-3950.00</td>
+                    <td>Mutual serving</td>
+                </tr>
+                <tr class="">
+                    <td class="lt-c">5</td>
+                    <td>January 19, 2016, 4:30 pm</td>
+                    <td class="lt-r nth">0.00</td>
+                    <td>Mutual serving</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <th class="lt-box lt-c">ID</th>
+                    <th class="lt-box">Date</th>
+                    <th class="lt-box lt-cell-2 lt-c nth">Amount / USD</th>
+                    <th class="lt-box">Details</th>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+
+    <div class="lt-row">
+        <p><b>Rowless table</b><br>To create a table without displaying the boundaries of rows, add the
+            class name <code>lt-no-row-border</code> to tag <code>table</code>, as bellow.</p>
+        <table class="lt-table hover lt-no-row-border">
+            <thead>
+                <tr class="rel">
+                    <th class="lt-box lt-c">ID</th>
+                    <th class="lt-box lt-cell-3">Date</th>
+                    <th class="lt-box lt-cell-2 lt-c nth">Amount / USD</th>
+                    <th class="lt-box">Details</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="">
+                    <td class="lt-c">1</td>
+                    <td>April 13, 2016, 6:59 pm</td>
+                    <td class="lt-r nth">-3950.00</td>
+                    <td>Mutual serving</td>
+                </tr>
+                <tr class="">
+                    <td class="lt-c">2</td>
+                    <td>April 13, 2016, 9:29 am</td>
+                    <td class="lt-r nth">0.00</td>
+                    <td>Mutual serving</td>
+                </tr>
+                <tr class="">
+                    <td class="lt-c">3</td>
+                    <td>March 2, 2016, 7:59 pm</td>
+                    <td class="lt-r nth">-100.00</td>
+                    <td>Mutual serving</td>
+                </tr>
+                <tr class="">
+                    <td class="lt-c">4</td>
+                    <td>January 25, 2016, 6:42 pm</td>
+                    <td class="lt-r nth">-3950.00</td>
+                    <td>Mutual serving</td>
+                </tr>
+                <tr class="">
+                    <td class="lt-c">5</td>
+                    <td>January 19, 2016, 4:30 pm</td>
+                    <td class="lt-r nth">0.00</td>
+                    <td>Mutual serving</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <th class="lt-box lt-c">ID</th>
+                    <th class="lt-box">Date</th>
+                    <th class="lt-box lt-cell-2 lt-c nth">Amount / USD</th>
+                    <th class="lt-box">Details</th>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+</div>

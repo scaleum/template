@@ -1,0 +1,26 @@
+{
+  "name": "scaleum/template",
+  "type": "project",
+  "require": {
+    "php": ">=8.1",
+    "ext-pdo": "*",
+    "ext-json": "*",
+    "ext-curl": "*",
+    "ext-mbstring": "*",
+    "chronolog/chronolog": "*",
+    "scaleum/framework": "*"
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "autoload": {
+    "psr-4": {
+      "Application\\": "protected/src/"
+    }
+  },
+  "repositories":[
+    {
+      "type":"git",
+      "url":"https://github.com/scaleum/framework.git"
+    }
+  ]
+}

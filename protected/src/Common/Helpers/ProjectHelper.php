@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 /**
- * This file is part of Scaleum Framework.
+ * This file is part of Scaleum Application.
  *
  * (C) 2009-2025 Maxim Kirichenko <kirichenko.maxim@gmail.com>
  *
@@ -23,7 +23,6 @@ use Scaleum\Stdlib\Helpers\PathHelper;
     public static function getPublicDir(): string
     {
         return PathHelper::join(dirname(__DIR__,4),"public");
-        // return realpath(__DIR__ . '/../../../../public');
     }
 
     public static function getProjectRoot(): string

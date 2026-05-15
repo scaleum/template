@@ -1,5 +1,4 @@
 <?php
-
 declare(strict_types=1);
 /**
  * This file is part of Scaleum Framework.
@@ -10,26 +9,24 @@ declare(strict_types=1);
  * file that was distributed with this source code.
  */
 
-namespace Application\Common\Traits;
+namespace Application\Common\Accessors;
 
 use Scaleum\Services\ServiceLocator;
+use Scaleum\Session\Contracts\SessionInterface;
 use Scaleum\Stdlib\Exceptions\ERuntimeError;
-use Scaleum\Storages\PDO\Database;
-
 /**
- * DatabaseTrait
+ * SessionTrait
  *
  * @author Maxim Kirichenko <kirichenko.maxim@gmail.com>
  */
-trait DatabaseTrait
+trait SessionTrait
 {
-    public function getDatabase(string $alias = 'db'): Database
-    {
-        $db = ServiceLocator::get($alias);
-        if (! $db instanceof Database) {
-            throw new ERuntimeError('Database service is not set or invalid');
+    public function getSession(): SessionInterface {
+        $result = ServiceLocator::get('session');
+        if (! $result instanceof SessionInterface) {
+            throw new ERuntimeError('Session service is not set or invalid');
         }
-        return $db;
+        return $result;
     }
 }
-/** End of DatabaseTrait **/
+/** End of SessionTrait **/

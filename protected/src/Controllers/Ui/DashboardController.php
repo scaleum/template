@@ -13,7 +13,7 @@ namespace Application\Controllers\Ui;
 
 use Application\Base\PageController;
 use Application\Common\i18n\LocaleManagerTrait;
-use Application\Common\Traits\SessionTrait;
+use Application\Common\Accessors\SessionTrait;
 use Application\Modules\Security\Authentication\Traits\UserTrait;
 use Scaleum\Http\OutboundResponse;
 

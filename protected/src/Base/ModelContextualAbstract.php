@@ -11,7 +11,7 @@ declare (strict_types = 1);
 namespace Application\Base;
 
 use Application\Contracts\ContextAwareInterface;
-use Application\Common\Traits\ContextAwareTrait;
+use Application\Common\Accessors\ContextAwareTrait;
 use Scaleum\Storages\PDO\ModelAbstract;
 
 /**

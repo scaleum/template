@@ -20,6 +20,8 @@ use Scaleum\Events\Event;
 use Scaleum\Events\EventHandlerInterface;
 use Scaleum\Events\EventManagerInterface;
 use Scaleum\Services\ServiceLocator;
+use Scaleum\Stdlib\SAPI\Explorer;
+use Scaleum\Stdlib\SAPI\SapiMode;
 
 /**
  * Services
@@ -32,12 +34,26 @@ class Services extends KernelProviderAbstract implements EventHandlerInterface {
     }
 
     public function onBoot(Event $event): void {
-        // Main config
-        ServiceLocator::set('config', $config = new Config([], '.', $this->getKernel()->getContainer()->get(LoaderResolver::class)));
+        $container = $this->getKernel()->getContainer();
+        // Формируем объект конфигурации времени выполнения приложения
+        // Это обеспечит доступ к основным директориям приложения и окружению сервисам без необходимости
+        // передавать их в конструктор каждого сервиса(доступ через трейт конфига).
+        $runtime = [
+            'configDir'   => $this->getKernel()->getConfigDir(),
+            'appDir'      => $this->getKernel()->getApplicationDir(),
+            'environment' => $this->getKernel()->getEnvironment(),
+        ];
 
-        $configDir = $this->getKernel()->getConfigDir();
-        
-        // Выполняем загрузку конфигураций приложения(если нужно)
+        // Базовые сервисы
+        ServiceLocator::set('config', $config = new Config(['runtime' => $runtime], '.', $container->get(LoaderResolver::class)));
+
+        // Сервисы, которые зависят от SAPI режима
+        if (Explorer::getTypeFamily() !== SapiMode::CONSOLE) {
+            ServiceLocator::set('router', $container->get('router'));
+        }
+
+        $configDir = $config->get('runtime.configDir');
+        // Можно выполнить загрузку конфигураций приложения(если нужно)
         // $files = [$configDir . '/simple.ini', $configDir . '/simple.xml'];
         // $config = ServiceLocator::get('config');
         // if ($config instanceof Config) {

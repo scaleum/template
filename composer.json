@@ -15,7 +15,10 @@
   "autoload": {
     "psr-4": {
       "Application\\": "protected/src/"
-    }
+    },
+    "files": [
+      "protected/src/Core/Functions.php"
+    ]    
   },
   "repositories":[
     {

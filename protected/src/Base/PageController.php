@@ -11,7 +11,7 @@ declare (strict_types = 1);
 
 namespace Application\Base;
 
-use Application\Common\Traits\ConfigTrait;
+use Application\Common\Accessors\ConfigTrait;
 use Scaleum\Http\Renderers\TemplateRenderer;
 
 /**

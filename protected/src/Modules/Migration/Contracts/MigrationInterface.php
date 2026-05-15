@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 /**
- * This file is part of Scaleum Framework.
+ * This file is part of Scaleum Application.
  *
  * (C) 2009-2025 Maxim Kirichenko <kirichenko.maxim@gmail.com>
  *

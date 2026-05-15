@@ -9,24 +9,26 @@ declare(strict_types=1);
  * file that was distributed with this source code.
  */
 
-namespace Application\Common\Traits;
+namespace Application\Common\Accessors;
 
+use Scaleum\Core\DependencyInjection\Framework;
+use Scaleum\Events\EventManager;
 use Scaleum\Services\ServiceLocator;
-use Scaleum\Session\SessionInterface;
 use Scaleum\Stdlib\Exceptions\ERuntimeError;
+
 /**
- * SessionTrait
+ * EventsTrait
  *
  * @author Maxim Kirichenko <kirichenko.maxim@gmail.com>
  */
-trait SessionTrait
+trait EventsTrait
 {
-    public function getSession(): SessionInterface {
-        $result = ServiceLocator::get('session');
-        if (! $result instanceof SessionInterface) {
-            throw new ERuntimeError('Session service is not set or invalid');
+    public function getEvents(): EventManager {
+        $result = ServiceLocator::get(Framework::SVC_EVENTS);
+        if (! $result instanceof EventManager) {
+            throw new ERuntimeError('EventManager service is not set or invalid');
         }
         return $result;
     }
 }
-/** End of SessionTrait **/
+/** End of EventsTrait **/

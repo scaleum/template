@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 /**
  * This file is part of Scaleum Framework.
@@ -9,26 +10,26 @@ declare(strict_types=1);
  * file that was distributed with this source code.
  */
 
-namespace Application\Common\Traits;
+namespace Application\Common\Accessors;
 
-use Scaleum\Core\DependencyInjection\Framework;
-use Scaleum\Events\EventManager;
 use Scaleum\Services\ServiceLocator;
 use Scaleum\Stdlib\Exceptions\ERuntimeError;
+use Scaleum\Storages\PDO\Database;
 
 /**
- * EventsTrait
+ * DatabaseTrait
  *
  * @author Maxim Kirichenko <kirichenko.maxim@gmail.com>
  */
-trait EventsTrait
+trait DatabaseTrait
 {
-    public function getEvents(): EventManager {
-        $result = ServiceLocator::get(Framework::SVC_EVENTS);
-        if (! $result instanceof EventManager) {
-            throw new ERuntimeError('EventManager service is not set or invalid');
+    public function getDatabase(string $alias = 'db'): Database
+    {
+        $db = ServiceLocator::get($alias);
+        if (! $db instanceof Database) {
+            throw new ERuntimeError('Database service is not set or invalid');
         }
-        return $result;
+        return $db;
     }
 }
-/** End of EventsTrait **/
+/** End of DatabaseTrait **/

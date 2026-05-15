@@ -11,7 +11,7 @@ declare (strict_types = 1);
 
 namespace Application\Base;
 
-use Application\Common\Traits\EventsTrait;
+use Application\Common\Accessors\EventsTrait;
 use Scaleum\Core\Contracts\KernelInterface;
 use Scaleum\Http\InboundRequest;
 use Scaleum\Stdlib\Exceptions\ERuntimeError;

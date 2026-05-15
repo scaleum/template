@@ -9,7 +9,7 @@ declare(strict_types=1);
  * file that was distributed with this source code.
  */
 
-namespace Application\Common\Traits;
+namespace Application\Common\Accessors;
 
 use Scaleum\Config\Config;
 use Scaleum\Services\ServiceLocator;
